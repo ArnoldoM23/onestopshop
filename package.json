@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "",
   "scripts": {
-    "postinstall": "webpack -p",
+    "postinstall": "webpack --config ./webpack.pro.config.js --progress --colors",
     "start": "node ./server.js",
     "dev": "nodemon ./server.js && webpack --config ./webpack.pro.config.js --watch "
   },
