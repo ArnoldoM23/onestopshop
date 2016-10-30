@@ -5,11 +5,9 @@
   "main": "index.js",
   "repository": "",
   "scripts": {
-    "start": "node ./server.js",
     "postinstall": "webpack -p",
-    "dev": "nodemon ./server.js && webpack --config ./webpack.pro.config.js --watch ",
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch"
+    "start": "node ./server.js",
+    "dev": "nodemon ./server.js && webpack --config ./webpack.pro.config.js --watch "
   },
   "author": "",
   "license": "ISC",
@@ -42,6 +40,7 @@
     "react-router": "^2.0.1",
     "redux": "^3.0.4",
     "redux-form": "^5.2.0",
+    "webpack": "^1.12.9",
     "redux-thunk": "^2.1.0"
   }
 }
