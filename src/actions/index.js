@@ -15,16 +15,16 @@ export function signIn({email, password}){
 };
 
 export function signUp({email, password}){
-	// const testUser = {
- //    "email": "chalie7777@woof.com",
- //    "password": "cookies",
- //    "firstName": "Charlie",
- //    "lastName": "Woof",
- //    "phoneNumber": "7654321"
-	// }
+	const testUser = {
+    "email": "chalie7777@woof.com",
+    "password": "cookies",
+    "firstName": "Charlie",
+    "lastName": "Woof",
+    "phoneNumber": "7654321"
+	}
 	
 	return function(dispatch){
-		axios.post(`${ROOT_URL}/signup`, { email, password })
+		axios.post(`${ROOT_URL}/signup`, testUser)
 			.then(response => {
 				handleResponse(response, dispatch);
 			})
