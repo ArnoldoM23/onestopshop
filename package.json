@@ -7,7 +7,7 @@
   "scripts": {
     "postinstall": "webpack --config ./webpack.pro.config.js --progress --colors",
     "start": "node ./server.js",
-    "dev": "nodemon ./server.js && webpack --config ./webpack.pro.config.js --watch "
+    "dev": "webpack --config ./webpack.dev.config.js --watch "
   },
   "author": "",
   "license": "ISC",
