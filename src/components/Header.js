@@ -7,31 +7,44 @@ class Header extends Component {
 	renderLoginLinks(){
 		if(this.props.authenticate){
 			return (
-				<li className="nav-item">
+				<li className="btn btn-default log">
 					<Link to="/signout">Sign Out</Link>
 				</li>
 			);
 		}else{
 			return [
-				<li className="nav-item" key={1} >
+				<li className="btn btn-default log" key={1} >
 					<Link to="/signin" >Sign In</Link>
 				</li>,
-				<li className="nav-item" key={2}>
+				<li className="btn btn-default log" key={2}>
 					<Link to="/signup">Sign Up</Link>
 				</li>
-				];
+				];	
 		}
+	}
+
+	renderMenu(list){
+		const menu = ['Home', 'Venue', 'Floris', 'Wedding Planner', 'Catering', 'Photagrapher', 'More'];
+		return menu.map((item, i) => {
+			return <li className='nav' key={i}><Link to='/'>Home</Link></li>
+		})
 	}
 
 
 	render(){
 		return (
-			<nav className='navbar navbar-light'>
-				<ul className="nav navbar-nav">
-					<li className='nav-item'><Link to='/'>Home</Link></li>
-					{ this.renderLoginLinks() }
-				</ul>
-			</nav>
+			<div id='header'>
+				<div >
+					<ul >
+						{ this.renderLoginLinks() }
+					</ul>
+				</div>
+				<div className='menu group'>
+					<ul className='navbar'>
+						{this.renderMenu()}
+					</ul>
+				</div>
+			</div>
 		);
 	}
 }

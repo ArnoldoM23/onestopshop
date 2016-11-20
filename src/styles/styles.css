@@ -1,0 +1,241 @@
+
+/*
+  ========================================
+  index html container
+  ========================================
+*/
+body, html{
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}
+#container {
+  height: 100%;
+}
+
+.appContainer{
+  width: 100%;
+  height: 100%;
+  background-color: green;
+}
+
+
+/*
+  ========================================
+  Navigation styles
+  ========================================
+*/
+#header {
+  width: 100%;
+  height: 30%;
+  background-color: pink;
+}
+
+.menu {
+  margin: 0 auto;
+  height: 25%;
+  position: relative;
+  bottom: -45%;
+}
+
+.navbar {
+  margin: 0 auto;
+  height: 100%;
+}
+
+.nav {
+  border-right: solid gray 1px;
+  border-radius: 8px;
+  background-color: purple;
+  color: #09D9E8;
+  opacity: .5;
+  display: inline-block;
+  width: 13.7%;
+  height: 100%;
+  text-align: center;
+  font-size: 24px;
+}
+
+/*
+  ========================================
+  content styles
+  ========================================
+*/
+
+.homeContainer {
+  position: relative;
+  top: -2.5%;
+  height: 70%;
+  background-color: yellow;
+}
+.listContainer {
+  width: 100%;
+  background-color: black;
+}
+.itemContainer {
+  height: 24%;
+  width: 24%;
+  background-color: blue;
+}
+
+
+
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+}
+
+
+
+.noBorder {
+  border: none;
+}
+
+#title {
+  font-size: 150px;
+  text-align: center;
+  padding-top: -35px;
+  position: relative;
+  top: -10px;
+}
+
+
+.homeFooter{
+  background: #ff0000 ;
+  background: linear-gradient(to bottom right, #3d4cf4, #3d4cf4, #3d4cf4);
+  height: 40px;
+}
+
+/*
+  ========================================
+  Buttons
+  ========================================
+*/
+
+.btn {
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  letter-spacing: .5px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.btn-default {
+  background: #20db4f;
+  opacity: .5;
+  padding: 11px 30px;
+  font-size: 14px;
+}
+
+.log {
+  margin-right: 15px;
+  float: right;
+}
+
+/*
+  ========================================
+  venue home styling
+  ========================================
+*/
+.homeTitle {
+  text-align: center;
+  color: purple;
+}
+
+.venueHome {
+  margin: 0 auto;
+  height: 345px;
+  width: 550px;
+  text-align: center;
+}
+
+.busName {
+  text-align: center;
+  position: relative;
+  top: -5px;
+}
+.venueMessage {
+  font-size: 24px;
+  width: 700px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/*
+  ========================================
+  wedding planer home styling
+  ========================================
+*/
+
+.mainBusDiv{
+  margin: 0 auto;
+  background-color: #D2D2D2;
+  height: 385px;
+  width: 335px;
+  border-radius: 7px;
+}
+
+.businessDiv {
+  margin: 0 auto;
+  background-color: purple;
+  height: 328px;
+  width: 335px;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.businessDiv img{
+  border-radius: 7px;
+}
+
+.left {
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+
+.right {
+  float: right;
+  height: 100%;
+  width: 50%;
+}
+
+/*
+  ========================================
+  login signup styling
+  ========================================
+*/
+.login {
+  text-align: center;
+  height: 400px;
+  width: 300px;
+  margin: 0 auto ;
+}
+
+.login input {
+  margin-top: 10px;
+  width: 295px;
+  height: 40px;
+}
+.login h1 {
+  font-size: 55px;
+}
+

@@ -35,4 +35,4 @@ ReactDOM.render(
 				<Route path='/feature' component={Authenticate(Feature)} />
 			</Route>
 		</Router>
-	</Provider>, document.querySelector('.container'));
+	</Provider>, document.getElementById('container'));
