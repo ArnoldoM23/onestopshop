@@ -6,7 +6,13 @@ module.exports = {
     path: __dirname+'/src/',
     publicPath: '/src/',
     filename: 'bundle.js'
-},
+  },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true,
+      compress: true
+    })
+  ],
   module: {
     loaders: [{
       exclude: /node_modules/,
@@ -18,9 +24,5 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
-  },
-  devServer: {
-    historyApiFallback: true,
-    contentBase: './'
   }
 };

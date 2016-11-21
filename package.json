@@ -1,7 +1,7 @@
 {
-  "name": "reactBasicScalable",
+  "name": "oneStop",
   "version": "1.0.0",
-  "description": "Simple starter package for Redux with React and Babel support",
+  "description": "one stop shop for fun",
   "main": "index.js",
   "repository": "",
   "scripts": {
