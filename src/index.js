@@ -15,6 +15,9 @@ import Business2 from './components/business/business2';
 import Business3 from './components/business/business3';
 import Business4 from './components/business/business4';
 import Business5 from './components/business/business5';
+import ClientProfile from './components/clientProfile/clientProfile';
+import VendorProfile from './components/vendorProfile/vendorProfile';
+import VendorLayout from './components/vendorLayout/layout1';
 import Reducers from './reducers/index';
 import { AUTH_USER } from './actions/types';
 import Authenticate from './components/auth/require_auth';
@@ -42,6 +45,8 @@ ReactDOM.render(
 				<Route path='/business3' component={Business3} />
 				<Route path='/business4' component={Business4} />
 				<Route path='/business5' component={Business5} />
+				<Route path='/clientProfile' component={Authenticate(ClientProfile)} />
+				<Route path='/vendorProfile' component={Authenticate(VendorProfile)} />
 			</Route>
 		</Router>
 	</Provider>, document.getElementById('container'));
