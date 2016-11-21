@@ -3,13 +3,20 @@ import ListItem from './listItem.js';
 
 
 const ItemList = ({list}) => {
-	const renderList = list.map((item, i) => {
-		return <ListItem item={item} key={i} />
+	const rightSection = [];
+	const leftSection = [];
+  list.forEach((item, i) => {
+		if (i % 2 === 0 ) { 
+			rightSection.push(<ListItem item={item} key={i} />)
+		} else {
+		 leftSection.push(<ListItem item={item} key={i} />)
+		}
 	});
 
 	return(
 		<div className='listContainer'>
-			{ renderList }
+			<section className='leftSection'>{ leftSection }</section>
+			<section className='rightSection'>{ rightSection }</section>
 		</div>
 	);
 }

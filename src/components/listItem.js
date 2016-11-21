@@ -6,6 +6,7 @@ const ListItem = ({ item }) => {
 		<div className='itemContainer' >
 			<div > 
 				something here
+				<img/>
 			</div>
 			<div>
 				<p>This is the best venue in town</p>

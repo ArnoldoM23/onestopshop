@@ -24,9 +24,9 @@ class Header extends Component {
 	}
 
 	renderMenu(list){
-		const menu = ['Home', 'Venue', 'Floris', 'Wedding Planner', 'Catering', 'Photagrapher', 'More'];
+		const menu = ['Home', 'bussines1', 'bussines2', 'bussines3', 'bussines4', 'bussines5', 'More'];
 		return menu.map((item, i) => {
-			return <li className='nav' key={i}><Link to='/'>Home</Link></li>
+			return <li className='nav' key={i}><Link to='/'>{item}</Link></li>
 		})
 	}
 
