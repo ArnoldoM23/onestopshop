@@ -3,11 +3,17 @@ import ItemList from '../itemList';
 
 
 class Business2 extends Component {
+	constructor(){
+		super()
+		this.state = { list: ["place 2","place 2","place 2","place 2","place 2","place 2"]}
+	} 
 
 	render(){
-		<div>
-			
-		</div>
+		return(
+			<div>
+				<ItemList list={this.state.list}/>
+			</div>
+		)
 	}
 }
 

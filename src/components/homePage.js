@@ -4,7 +4,6 @@ export default class FrontPage extends Component {
 
 	constructor(){
 		super()
-		this.state = { list: ["place 1","place 1","place 1","place 1","place 1","place 1"]}
 	}
 
 	render(){

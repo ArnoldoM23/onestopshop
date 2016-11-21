@@ -2,11 +2,17 @@ import React, { Component } from 'react';
 import ItemList from '../itemList';
 
 class Business5 extends Component {
+	constructor(){
+		super()
+		this.state = { list: ["place 5","place 5","place 5","place 5","place 5","place 5"]}
+	}
 
 	render(){
-		<div>
-			
-		</div>
+		return(
+			<div>
+				<ItemList list={this.state.list}/>
+			</div>
+		)
 	}
 }
 

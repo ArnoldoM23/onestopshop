@@ -5,7 +5,7 @@ const ListItem = ({ item }) => {
 	return (
 		<div className='itemContainer' >
 			<div > 
-				something here
+				<h1>{item}</h1>
 				<img/>
 			</div>
 			<div>
