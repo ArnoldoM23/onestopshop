@@ -19,7 +19,7 @@ class Header extends Component {
 				<li className="" key={2}>
 					<Link to="/signup">Sign Up</Link>
 				</li>
-				];	
+			];	
 		}
 	}
 
