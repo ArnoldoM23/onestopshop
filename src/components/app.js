@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import Header from './Header';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
-export default class App extends Component {
+
+class App extends Component {
 	
 	componentWillMount(){
 		// This will grab the token from the url store in the localstorage
@@ -21,3 +24,5 @@ export default class App extends Component {
 		)
 	}
 }
+
+export default connect(null, actions)(App);

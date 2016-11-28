@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import * as actions from '../../actions';
+
 const ROOT_URL = 'http://localhost:3090'
 
 class SignIn extends Component {
 
 	handleFormSubmit({email, password}){
 		this.props.signIn({ email, password });
-	}
-
-	handleFacebookLogin(){
-		console.log(this.props)
-		this.props.facebookLogin();
 	}
 
 	renderAlert(){
@@ -40,7 +36,8 @@ class SignIn extends Component {
 					</fieldset>
 					<button action='submit' className='btn btn-primary'>Sign In</button>
 				</form>
-				<button onClick={this.handleFacebookLogin.bind(this)}>Facebook Login</button>
+				<a href={`${ROOT_URL}/auth/facebook`}><button>Facebook Login</button></a>
+				<a href={`${ROOT_URL}/auth/google`}><button>Google Login</button></a>
 			</div>
 		);
 	}

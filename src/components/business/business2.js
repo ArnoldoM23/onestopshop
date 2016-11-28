@@ -10,7 +10,7 @@ class Business2 extends Component {
 
 	render(){
 		return(
-			<div>
+			<div className='vendorContainer'>
 				<ItemList list={this.state.list}/>
 			</div>
 		)

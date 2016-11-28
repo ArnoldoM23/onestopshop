@@ -3,7 +3,6 @@ body, html{
   width: 100%;
   margin: 0px;
   padding: 0px;
-  background-color: purple;
 }
 /*
   ========================================
@@ -26,7 +25,6 @@ body, html{
   padding-top: -30px;
   height: 100%;
   width: 100%;
-  background-color: green;
 }
 
 
@@ -40,9 +38,27 @@ body, html{
   height: 30%;
   margin: 0px
   padding: 0px;
-  background-color: yellow;
+  background-color: #c0ced6;
 }
 
+
+.navItem {
+  list-style-type: none;
+  background-color: #4cdaf7;
+  position: relative;
+  bottom: -4.3em;
+  border-right: solid gray 1px;
+  border-radius: 8px;
+  color: #09D9E8;
+  display: inline-block;
+  width: 14.2%;
+  text-align: center;
+  font-size: 24px;
+}
+
+.loginButtons {
+  float: right;
+}
 
 
 
@@ -63,6 +79,34 @@ body, html{
   ========================================
 */
 
+.btn {
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  letter-spacing: .5px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.btn-default {
+  background-color: #0c9af2;
+  padding: 11px 30px;
+  font-size: 14px;
+}
+
+.log {
+  margin-right: 15px;
+  float: right;
+}
+
+.view {
+  margin-right: 15px;
+  margin-top: -15px;
+  float: right;
+}
+
 
 
 /*
@@ -70,13 +114,12 @@ body, html{
   home styling
   ========================================
 */
-.homeContainer {
-  height: 70%;
+.vendorContainer {
   width: 100%;
   margin: 0px
   padding: 0px;
-  background-color: orange;
 }
+
 
 
 /*
@@ -84,6 +127,58 @@ body, html{
   wedding planer home styling
   ========================================
 */
+.leftSection {
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+
+.rightSection {
+  float: right;
+  height: 100%;
+  width: 50%;
+}
+
+.itemContainer {
+  margin: 0 auto;
+  background-color: #D2D2D2;
+  height: 26em;
+  width: 30.5em;
+  border-radius: 7px;
+  margin-top: 1.5em;
+}
+
+.mainThumbnailDiv {
+  height: 14.5em;
+  width: 30.5em;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+.mainThumbnailDiv img{
+  width: 100%;
+}
+
+.thumbList {
+  height: 5.5em;
+  width: 30.5em;
+}
+.thumbList img{
+  height: 100%;
+}
+
+.miniThumbnail {
+  display: inline-block;
+  height: 100%;
+  width: 20%;
+  border-right: solid gray 1px;
+}
 
 
+.vendorMsg {
+  text-align: center;
+}
 
+.thumbnail {
+  max-width: 100%;
+  max-height: 100%;
+}
