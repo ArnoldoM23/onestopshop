@@ -7,9 +7,9 @@ const ItemList = ({list}) => {
 	const leftSection = [];
   list.forEach((item, i) => {
 		if (i % 2 === 0 ) { 
-			rightSection.push(<ListItem item={item} key={i} />)
+			rightSection.push(<ListItem item={item} id={i} key={i} />)
 		} else {
-		 leftSection.push(<ListItem item={item} key={i} />)
+		 leftSection.push(<ListItem item={item} id={i} key={i} />)
 		}
 	});
 

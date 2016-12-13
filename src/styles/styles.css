@@ -56,8 +56,18 @@ body, html{
   font-size: 24px;
 }
 
+
+.authContainer {
+  margin: 0 auto;
+  margin-top: 1em;
+  height: 25em;
+  width: 30em;
+  border: solid gray 1px;
+  box-shadow: 10px 10px 5px #888888;
+}
+
 .loginButtons {
-  float: right;
+  float: right; 
 }
 
 
@@ -178,7 +188,48 @@ body, html{
   text-align: center;
 }
 
-.thumbnail {
+img {
   max-width: 100%;
   max-height: 100%;
+}
+
+/*
+  ========================================
+  Client Profile styling
+  ========================================
+*/
+
+.clientThumbnail {
+  height: 15em;
+  width: 15em;
+  background-color: red;
+  float: left;
+}
+
+.buget {
+  height: 5em;
+  width: 15em;
+  float: right;
+  background-color: blue;
+  margin-right: 1em;
+  text-align: center;
+  color: white;
+}
+
+.vendorList {
+  margin: 0 auto;
+  height: 20em;
+  width: 60em;
+  background-color: green;
+  overflow: scroll;
+  position: relative;
+  top: 3em;
+}
+
+.willBeDropDown {
+  width: 100%;
+  height: 5em;
+  border: solid 1px black;
+  border-radius: 1em;
+  background-color: yellow;
 }

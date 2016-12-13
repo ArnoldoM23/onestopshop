@@ -24,20 +24,20 @@ class SignUp extends Component {
 		const { handleSubmit, fields: { email, password, confirmPassword } } = this.props;
 
 		return(
-			<div className='container'>
+			<div className='authContainer'>
 				<form onSubmit={ handleSubmit(this.handleSubmitForm.bind(this)) }>
 					<fieldset className='form-group'>
-						<label>Email:</label>
+						<label> Email:</label>
 						<input {...email} className='form-control'/>
 						{email.touched && email.error && <div className="error">{email.error}</div>}
 					</fieldset>
 					<fieldset className='form-group'>
-						<label>Password:</label>
+						<label> Password:</label>
 						<input {...password} type='password' className='form-control'/>
 						{password.touched && password.error && <div className="error">{password.error}</div>}
 					</fieldset>
 					<fieldset className='form-group'>
-						<label>Comfirm Password:</label>
+						<label> Comfirm Password:</label>
 						<input {...confirmPassword} type='password' className='form-control'/>
 						{confirmPassword.touched && confirmPassword.error && <div className="error">{confirmPassword.error}</div>}
 					</fieldset>

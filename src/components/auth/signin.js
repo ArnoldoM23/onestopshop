@@ -24,20 +24,20 @@ class SignIn extends Component {
 		const { handleSubmit, fields: { email, password } } = this.props;
 
 		return (
-			<div>
+			<div className='authContainer'>
 				<form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
 					<fieldset className='form-group'>
-						<label>Email:</label>
+						<label> Email:</label>
 						<input {...email } className='form-control' />
 					</fieldset>
 					<fieldset className='form-group'>
-						<label>Password:</label>
+						<label> Password:</label>
 						<input {...password } type='password' className='form-control' />
 					</fieldset>
 					<button action='submit' className='btn btn-primary'>Sign In</button>
 				</form>
-				<a href={`${ROOT_URL}/auth/facebook`}><button>Facebook Login</button></a>
-				<a href={`${ROOT_URL}/auth/google`}><button>Google Login</button></a>
+				<a href={`${ROOT_URL}/auth/facebook`}><button className='btn log' >Facebook Login</button></a>
+				<a href={`${ROOT_URL}/auth/google`}><button className='btn log' >Google Login</button></a>
 			</div>
 		);
 	}

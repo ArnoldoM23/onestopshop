@@ -6,11 +6,14 @@ class Header extends Component {
 
 	renderLoginLinks(){
 		if(this.props.authenticate){
-			return (
-				<li className="btn btn-default log">
+			return [
+				<li className="btn btn-default log" key={1}>
 					<Link to="/signout">Sign Out</Link>
+				</li>,
+				<li className="btn btn-default log" key={2}>
+					<Link to="/clientProfile">Client Name</Link>
 				</li>
-			);
+			];
 		}else{
 			return [
 				<li className="btn btn-default log" key={1} >

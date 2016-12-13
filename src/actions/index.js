@@ -11,16 +11,17 @@ export function signIn({email, password}){
 			.then(response => {
 				handleResponse(response, dispatch)
 			})
+			.catch(err => console.log(err));
 	};
 };
 
 export function signUp({email, password}){
-
 	return function(dispatch){
 		axios.post(`${ROOT_URL}/signup`, {email, password})
 			.then(response => {
 				handleResponse(response, dispatch);
 			})
+			.catch(err => console.log(err));
 	};
 };
 
@@ -30,28 +31,42 @@ export function passortLogin(){
  
 export function fetchMesssages(){
 	return function(dispatch){
-		const token = localStorage.getItem('token');
 		axios.get(ROOT_URL, {
-			headers: { authorization: token}
+			headers: { authorization: getToken()}
 		})
-			.then(response =>{
-				dispatch({
-					type: FETCH_MESSAGE,
-					payload: response.data.message
-				});
-			})
+		.then(response =>{
+			dispatch({
+				type: FETCH_MESSAGE,
+				payload: response.data.message
+			});
+		})
+		.catch(err => console.log(err));
 	}
 }
 
-
+export function getAllVendor(cb){
+	return function(dispatch){
+		axios.get(ROOT_URL, {
+			headers: {authorization: getToken()}
+		})
+		.then(response => { cb(response) })
+		.catch(err => console.log(err));
+	}
+}
 
 export function signoutUser(){
 	localStorage.removeItem('token')
 	return {type: UNAUTH_USER};
 }
 
+// Helper function 
 function handleResponse(response, dispatch){
 	dispatch({type: AUTH_USER})
 	localStorage.setItem('token', response.data.token);
 	browserHistory.push('/feature')
 };
+
+function getToken(){
+	return localStorage.getItem('token');
+}
+

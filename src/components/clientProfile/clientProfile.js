@@ -5,18 +5,22 @@ class ClientProfile extends Component {
 	render(){
 		return (
 			<div>
-				<div className='clientThumbnail'>
-					<img src=''/>	
-				</div>
 				<div>
-					<p>buget = 12,000</p>
-					<p>total = 5,000</p>
+					<div className='clientThumbnail'>
+						<img className='' src=''/>	
+					</div>
+					<div className='buget'>
+						<h3>buget = 500,000</h3>
+					</div>
+					<div className='buget'>
+						<h3>total = 200,000</h3>
+					</div>
 				</div>
-				<div className='vendorList'>
+				<div className='vendorList clear'>
 					<div className='willBeDropDown'>
-						<button>send Message</button>
+						<div><button className='btn log'>send Message</button></div>
 						<div className='hideOrShowdiv'>
-							meet with client = complete
+							<h3>vendor 1 foods</h3>
 						</div>
 					</div>
 				</div>	
