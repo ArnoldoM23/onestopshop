@@ -7,19 +7,19 @@ class Header extends Component {
 	renderLoginLinks(){
 		if(this.props.authenticate){
 			return [
-				<li className="btn btn-default log" key={1}>
+				<li key={1}>
 					<Link to="/signout">Sign Out</Link>
 				</li>,
-				<li className="btn btn-default log" key={2}>
+				<li  key={2}>
 					<Link to="/clientProfile">Client Name</Link>
 				</li>
 			];
 		}else{
 			return [
-				<li className="btn btn-default log" key={1} >
+				<li key={1} >
 					<Link to="/signin" >Sign In</Link>
 				</li>,
-				<li className="btn btn-default log" key={2}>
+				<li  key={2}>
 					<Link to="/signup">Sign Up</Link>
 				</li>
 			];	
@@ -39,18 +39,24 @@ class Header extends Component {
 
 	render(){
 		return (
-			<div id='header'>
-				<div className='loginButtons' >
-					<ul >
-						{ this.renderLoginLinks() }
-					</ul>
+			<header>
+				<nav>
+					<div >
+						<img src='' atl='app-logo'/>
+						<ul className='main-nav'>
+							<li><Link to='#'>Venues</Link></li>
+							<li><Link to='#'>How it works</Link></li>
+							<li><Link to='#'>Our cities</Link></li>
+							{ this.renderLoginLinks() }
+						</ul>
+					</div>
+				</nav>
+				<div className='hero-text-box'>
+					<h1>Goodbye junk food.<br/> Hello super healthy meals.</h1>
+					<a className='btn btn-full' href='#'>I'm hungry</a>
+					<a className='btn btn-ghost' href='#'>Show me more</a>
 				</div>
-				<div className='menu clear'>
-					<ul className='navbar'>
-						{this.renderMenu()}
-					</ul>
-				</div>
-			</div>
+			</header>
 		);
 	}
 }
