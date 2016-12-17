@@ -26,15 +26,6 @@ class Header extends Component {
 		}
 	}
 
-	renderMenu(list){
-		const menu = ['Home', 'business1', 'business2', 'business3', 'business4', 'business5', 'More'];
-		return menu.map((item, i) => {
-			if (item === 'Home') {
-				return <li className='navItem' key={i}><Link to='/'>{item}</Link></li>
-			}
-			return <li className='navItem' key={i}><Link to={`/${item}`}>{item}</Link></li>
-		})
-	}
 
 
 	render(){
@@ -52,7 +43,7 @@ class Header extends Component {
 					</div>
 				</nav>
 				<div className='hero-text-box'>
-					<h1>Goodbye junk food.<br/> Hello super healthy meals.</h1>
+					<h1>Its your special day.<br/>Let us make it unique .</h1>
 					<a className='btn btn-full' href='#'>I'm hungry</a>
 					<a className='btn btn-ghost' href='#'>Show me more</a>
 				</div>

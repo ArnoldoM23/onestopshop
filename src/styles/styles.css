@@ -97,10 +97,58 @@ header {
 
 .main-nav li a:hover,
 .main-nav li a:active {
-	border-bottom: 2px solid #e67e22;
+	border-bottom: 2px solid #FF4081;
 }
 
+/*
+=============================================
+Button styles
+=============================================
+*/
 
+.btn:link,
+.btn:visited,
+input[type=submit] {
+	display: inline-block;
+	padding: 10px 30px;
+	font-weight: 300;
+	text-decoration: none;
+	border-radius: 200px;
+	transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+	background-color: #FF4081;
+	border: 1px solid #FF4081;
+	color: #fff;
+	margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+	border: 1px solid #FF4081;
+	color: #FF4081;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+	background-color: #ea3f78;
+}
+
+.btn-full:hover,
+.btn-full:active {
+	border: 1px solid #ea3f78;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+	border: 1px solid #ea3f78;
+	color: #fff;
+}
 
 
 
