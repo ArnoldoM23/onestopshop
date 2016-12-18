@@ -16,17 +16,17 @@ const ListItem = ({ item, id }) => {
 	}
 
 	return (
-		<div className='itemContainer clear' >
-			<div className='mainThumbnailDiv'> 
+		<div className='col span-1-of-3' >
+			<div className='itemContainer'>
 				<img id={`thumbnail${id}`} src='http://www.eventsbysaker.com/wp-content/uploads/2015/02/event1.jpg'/>
+				<div className='thumbList'>
+					{ thumbnailList() }
+				</div>
+				<div className='vendorMsg'>
+					<p>This is the best venue in town This is the best venue in town This is the best venue in town</p>
+				</div>
+				<a className='btn btn-full' href='#'>View</a>
 			</div>
-			<div className='thumbList'>
-				{ thumbnailList() }
-			</div>
-			<div className='vendorMsg'>
-				<p>This is the best venue in town This is the best venue in town This is the best venue in town</p>
-			</div>
-			<button className='btn view'>View</button>
 		</div>
 	);
 }

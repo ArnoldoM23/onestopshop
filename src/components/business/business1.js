@@ -5,12 +5,12 @@ class Business1 extends Component {
 
 	constructor(){
 		super()
-		this.state = { list: ["place 1","place 1","place 1","place 1","place 1","place 1"]}
+		this.state = { list: ["place 1","place 1","place 1"] }
 	}
 
 	render(){
 		return(
-			<div className='vendorContainer'>
+			<div className=''>
 				<ItemList list={this.state.list}/>
 			</div>
 		)
