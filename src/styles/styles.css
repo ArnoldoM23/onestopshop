@@ -188,12 +188,9 @@ input[type=submit] {
 }
 
 input[type=submit]{
-	margin-top: 25px;
-	margin-bottom: 25px;
-	width: 100%;
 	background-color: #45A3E3;
 	border: 1px solid #45A3E3;
-	border-radius: 0;
+	border-radius: 3px;
 	color: #fff;
 }
 
@@ -254,7 +251,10 @@ input[type=submit]:active {
 	border: 1px solid #dd4b39;
 }
 
-
+.logBtnContainer {
+	width: 100%;
+	padding: 25px 15px;
+}
 
 /*
 =============================================
@@ -264,6 +264,10 @@ Home page styles
 
 .row {
 	width: 100%;
+}
+
+.listContainer {
+	background-color: #f4f4f4;
 }
 
 .itemContainer {
@@ -277,10 +281,6 @@ Home page styles
 .itemContainer div {
 	padding: 15px;
 	border-bottom: 1px solid #e8e8e8;
-}
-
-.listContainer {
-	background-color: #f4f4f4;
 }
 
 .thumbNailList {
@@ -312,21 +312,34 @@ Home page styles
 
 /*
 =============================================
-Form Section styles
+Login Form Section styles
 =============================================
 */
+.authContainer {
+	background-color: #f4f4f4;
+	height: 100%;
+	padding-bottom: 200px;
+}
+
+.logs {
+	background-color: #fff;
+	width: 25em;
+	padding: 0;
+	margin: 0 auto;
+	box-shadow: 3px 3px 3px gray;
+}
 
 .contact-form {
-	width: 50%;
-	margin: 0 auto;
+	width: 100%;
 }
 
 
 input[type=text],
 input[type=email],
-input[type=password] {
+input[type=password],
+input[type=submit] {
 	width: 100%;
-	padding: 7px;
+	padding: 7px 0;
 	border-radius: 3px;
 	border: 1px solid #ccc;
 }

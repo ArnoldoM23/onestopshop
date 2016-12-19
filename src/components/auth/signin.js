@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import { reduxForm } from 'redux-form';
 import * as actions from '../../actions';
 
@@ -28,22 +29,23 @@ class SignIn extends Component {
 				<div className='row'>
 					<h2>Welcome back please sign in</h2>
 				</div>
-				<div className='row'>
+				<div className='logs'>
 					<form className='contact-form' onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
-						<fieldset className='row'>
+						<fieldset >
 							<label> Email:</label>
 							<input {...email } type='email' className='form-control' />
 						</fieldset>
-						<fieldset className='row'>
+						<fieldset >
 							<label> Password:</label>
 							<input {...password } type='password' className='form-control' />
 						</fieldset>
-						<div className='logBtnContainer' >
+						<fieldset  >
 							<input type='submit' value='Sign In'/>
-						</div>
-						<div>
+						</fieldset>
+						<div className='logBtnContainer'>
 							<a href={`${ROOT_URL}/auth/facebook`} className='btn btn-fb' ><i className='.icon-big ion-social-facebook'></i>&nbsp; Sign In</a>
 							<a href={`${ROOT_URL}/auth/google`} className='btn btn-gplus'><i className=' .icon-big ion-social-googleplus'></i>&nbsp; Sign In</a>
+							<Link className='' to='/signup'>Sign Up</Link>
 						</div>	
 					</form>
 				</div>

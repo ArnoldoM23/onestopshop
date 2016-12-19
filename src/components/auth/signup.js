@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import { reduxForm } from 'redux-form';
 import * as actions from '../../actions'
 
@@ -24,26 +25,36 @@ class SignUp extends Component {
 		const { handleSubmit, fields: { email, password, confirmPassword } } = this.props;
 
 		return(
-			<div className='authContainer'>
-				<form onSubmit={ handleSubmit(this.handleSubmitForm.bind(this)) }>
-					<fieldset className='form-group'>
-						<label> Email:</label>
-						<input {...email} className='form-control'/>
-						{email.touched && email.error && <div className="error">{email.error}</div>}
-					</fieldset>
-					<fieldset className='form-group'>
-						<label> Password:</label>
-						<input {...password} type='password' className='form-control'/>
-						{password.touched && password.error && <div className="error">{password.error}</div>}
-					</fieldset>
-					<fieldset className='form-group'>
-						<label> Comfirm Password:</label>
-						<input {...confirmPassword} type='password' className='form-control'/>
-						{confirmPassword.touched && confirmPassword.error && <div className="error">{confirmPassword.error}</div>}
-					</fieldset>
-					<button action='submit' className='btn btn-primary'>Sign Up</button>
-				</form>
-			</div>
+			<section className='authContainer'>
+				<div className='row'>
+					<h2>Don't have an account sign up today</h2>
+				</div>
+				<div className='logs'>
+					<form onSubmit={ handleSubmit(this.handleSubmitForm.bind(this)) }>
+						<fieldset className='form-group'>
+							<label> Email:</label>
+							<input {...email} type='email' className='form-control'/>
+							{email.touched && email.error && <div className="error">{email.error}</div>}
+						</fieldset>
+						<fieldset className='form-group'>
+							<label> Password:</label>
+							<input {...password} type='password' className='form-control'/>
+							{password.touched && password.error && <div className="error">{password.error}</div>}
+						</fieldset>
+						<fieldset className='form-group'>
+							<label> Comfirm Password:</label>
+							<input {...confirmPassword} type='password' className='form-control'/>
+							{confirmPassword.touched && confirmPassword.error && <div className="error">{confirmPassword.error}</div>}
+						</fieldset>
+						<fieldset>
+							<input type='submit' value='Sign Up'/>
+						</fieldset>
+						<div className='logBtnContainer'>
+							<Link to='/signin'>Sign in</Link>
+						</div>
+					</form>
+				</div>	
+			</section>
 		);
 	}
 };
