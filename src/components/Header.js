@@ -44,7 +44,7 @@ class Header extends Component {
 				</nav>
 				<div className='hero-text-box'>
 					<h1>Its your special day.<br/>Let us make it unique .</h1>
-					<a className='btn btn-full' href='#'>I'm hungry</a>
+					<a className='btn btn-full' href='#'>Venues</a>
 					<a className='btn btn-ghost' href='#'>Show me more</a>
 				</div>
 			</header>
