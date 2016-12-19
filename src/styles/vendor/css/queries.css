@@ -41,34 +41,105 @@
 /*small phone to tablet*/
 @media only screen and (max-width: 767px) {
 	body { font-size: 16px; }
-	section { padding: 30px 0;}
-	 
-	.row,
-	.hero-text-box { padding: 0 4%; }
-	.col { width: 100%; margin: 0 0 4% 0;}
-	.main-nav { display: none; }
-	h1 { font-size: 180%; }
-	h2 { font-size: 150%; }
-	.long-copy {
-		width: 100%;
-		margin-left: 0;
-	}
+    section { padding: 30px 0; }
+    
+    /*
+    
+    .row,
+    .hero-text-box { padding: 0 4%; }
+    .col { 
+        width: 100%;
+        margin: 0 0 4% 0;
+    }
+    */
+    
+    .col { width: 100%; }
+    
+    
+    .span-1-of-4 {
+        width: 49.2%; /*This is the width of a span-1-of-2 column (see grid.css file), since this is basically what we want to achieve*/
+    }
+    
+    /* This is a very powerful selector we had not yet talked about*/
+    .span-1-of-4:nth-child(2n+1) {
+        margin-left: 0;
+    }
+    
+    
+    .main-nav { display: none; }
+    .mobile-nav-icon {display: inline-block;}
+    
+    .main-nav {
+        float: left;
+        margin-top: 30px;
+        margin-left: 25px;
+    }
+    
+    .main-nav li {
+        display: block;
+    }
+    
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        display: block;
+        border: 0;
+        padding: 10px 0;
+        font-size: 100%;
+    }
+    
+    .sticky .main-nav { margin-top: 10px; }
 
-	.steps-box:first-child {
-		text-align: center;
-	}
-	.work-step div {
-		height: 40px;
-		width: 40px;  
-		margin-right: 20px; 
-		padding: 4px;
-		font-size: 120%;
-	}
-	.work-step { margin-bottom: 20px; }
-	.work-step:last-of-type { margin-bottom: 20px; }
-	.app-screen { width: 40%; }
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited { padding: 10px 0; }
+    .sticky .mobile-nav-icon { margin-top: 10px; }
+    .sticky .mobile-nav-icon i { color: #555; }
+    
+    
+    
+    h1 { font-size: 180%; }
+    h2 { font-size: 150%; }
+    
+    .long-copy {
+        width: 100%;
+        margin-left: 0%;
+    }
+    
+    .app-screen { width: 40%; }
+    .steps-box:first-child { text-align: center; }
+    
+    .works-step div {
+        height: 40px;
+        width: 40px;
+        margin-right: 15px;
+        padding: 4px;
+        font-size: 120%;
+    }
+    
+    .works-step { margin-bottom: 20px; }
+    .works-step:last-of-type { margin-bottom: 20px; }
+    
+    .map-box {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .map {
+        width: 100%;
+        height: 300px;
+        position: relative;
+        z-index: 0;
+    }
+
+    .form-box {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 30px 0;
+    }
+
+    
 }
-
 
 
 

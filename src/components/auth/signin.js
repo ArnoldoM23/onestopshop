@@ -24,21 +24,30 @@ class SignIn extends Component {
 		const { handleSubmit, fields: { email, password } } = this.props;
 
 		return (
-			<div className='authContainer'>
-				<form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
-					<fieldset className='form-group'>
-						<label> Email:</label>
-						<input {...email } className='form-control' />
-					</fieldset>
-					<fieldset className='form-group'>
-						<label> Password:</label>
-						<input {...password } type='password' className='form-control' />
-					</fieldset>
-					<button action='submit' className='btn btn-primary'>Sign In</button>
-				</form>
-				<a href={`${ROOT_URL}/auth/facebook`}><button className='btn log' >Facebook Login</button></a>
-				<a href={`${ROOT_URL}/auth/google`}><button className='btn log' >Google Login</button></a>
-			</div>
+			<section className='authContainer'>
+				<div className='row'>
+					<h2>Welcome back please sign in</h2>
+				</div>
+				<div className='row'>
+					<form className='contact-form' onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+						<fieldset className='row'>
+							<label> Email:</label>
+							<input {...email } type='email' className='form-control' />
+						</fieldset>
+						<fieldset className='row'>
+							<label> Password:</label>
+							<input {...password } type='password' className='form-control' />
+						</fieldset>
+						<div className='logBtnContainer' >
+							<input type='submit' value='Sign In'/>
+						</div>
+						<div>
+							<a href={`${ROOT_URL}/auth/facebook`} className='btn btn-fb' ><i className='.icon-big ion-social-facebook'></i>&nbsp; Sign In</a>
+							<a href={`${ROOT_URL}/auth/google`} className='btn btn-gplus'><i className=' .icon-big ion-social-googleplus'></i>&nbsp; Sign In</a>
+						</div>	
+					</form>
+				</div>
+			</section>
 		);
 	}
 };
