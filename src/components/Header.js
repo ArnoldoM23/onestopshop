@@ -32,7 +32,7 @@ class Header extends Component {
 		return (
 			<header>
 				<nav>
-					<div >
+					<div className='row'>
 						<img src='' atl='app-logo'/>
 						<ul className='main-nav'>
 							<li><Link to='#'>Venues</Link></li>

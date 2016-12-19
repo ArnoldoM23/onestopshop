@@ -63,7 +63,7 @@ export function signoutUser(){
 function handleResponse(response, dispatch){
 	dispatch({type: AUTH_USER})
 	localStorage.setItem('token', response.data.token);
-	browserHistory.push('/feature')
+	browserHistory.push('/')
 };
 
 function getToken(){

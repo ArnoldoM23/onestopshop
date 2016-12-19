@@ -72,6 +72,13 @@ h2:after {
 	height: auto;
 	margin-bottom: 15px;
 }*/
+
+
+.row {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
 /*
 =============================================
 icon styles
@@ -107,6 +114,10 @@ Paragraphs styles
 	margin-left: 15%;
 	margin-right: 15%;
 }
+
+.section-features .long-copy {
+	margin-bottom: 30px; 
+}
 /*
 =============================================
 Header styling setup
@@ -134,16 +145,15 @@ header {
 
 
 .main-nav {
+	float: right;
 	list-style: none;
-	display: flex;
-	justify-content: flex-end;
-	height: 4em;
-	align-items: flex-end;
+	margin-top: 55px;
 }
 
 
 .main-nav li {
-	margin-right: 40px;
+	display: inline-block;
+	margin-left: 40px;
 }
 
 .main-nav li a:link,
@@ -262,9 +272,6 @@ Home page styles
 =============================================
 */
 
-.row {
-	width: 100%;
-}
 
 .listContainer {
 	background-color: #f4f4f4;
@@ -310,7 +317,7 @@ Home page styles
 
 
 
-/*
+/*/*
 =============================================
 Login Form Section styles
 =============================================
