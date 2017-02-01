@@ -6,6 +6,7 @@
   "repository": "",
   "scripts": {
     "postinstall": "webpack --config ./webpack.pro.config.js --progress --colors",
+    "build": "webpack --config ./webpack.pro.config.js --progress --colors",
     "start": "node ./server.js",
     "server": "nodemon ./server.js",
     "dev": "webpack --config ./webpack.dev.config.js --watch "
@@ -37,6 +38,8 @@
     "babel-preset-stage-1": "^6.1.18",
     "body-parser": "^1.15.2",
     "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "jwt-decode": "^2.1.0",
     "lodash": "^3.10.1",
     "morgan": "^1.7.0",
     "react": "^0.14.3",
@@ -45,11 +48,7 @@
     "react-router": "^2.0.1",
     "redux": "^3.0.4",
     "redux-form": "^5.2.0",
-    "webpack": "^1.12.9",
     "redux-thunk": "^2.1.0",
-    "body-parser": "^1.15.2",
-    "cors": "^2.8.1",
-    "express": "^4.14.0",
-    "morgan": "^1.7.0"
+    "webpack": "^1.12.9"
   }
 }

@@ -1,8 +1,9 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
 import { AUTH_USER, UNAUTH_USER, AUTH_ERROR, FETCH_MESSAGE } from './types';
+import jwtDecode from 'jwt-decode';
 
-// const ROOT_URL = 'http://localhost:3090'
+// const ROOT_URL = 'http://localhost:3090/signin'
 const ROOT_URL = 'http://shoponceserver.herokuapp.com'
 
 export function signIn({email, password}){
@@ -20,6 +21,21 @@ export function signUp({email, password}){
 		axios.post(`${ROOT_URL}/signup`, {email, password})
 			.then(response => {
 				handleResponse(response, dispatch);
+			})
+			.catch(err => console.log(err));
+	};
+};
+
+export function updateClient(){
+	return function(dispatch){
+		const token = jwtDecode(localStorage.getItem('token'));
+		console.log('token', token)
+		axios.post(`${ROOT_URL}/client/${token.id}/updateClient`, {clientFirstName: "Charlie", clientLastName: "Munoz"}, {
+			headers: { authorization: getToken() }
+		} )
+			.then(response => {
+				console.log('response', response)
+				// handleResponse(response, dispatch);
 			})
 			.catch(err => console.log(err));
 	};
