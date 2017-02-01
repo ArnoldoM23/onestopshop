@@ -1,3 +1,5 @@
+## Shoponce
+
 Visit this link on your phone: https://shoponce.herokuapp.com
 
 One Stop Shop is a single page web app that connects customers with vendors to plan an event.
@@ -5,21 +7,29 @@ One Stop Shop is a single page web app that connects customers with vendors to p
 Stack:
 Node.js, Express.js, React.js, Redux.js, Webpack
 
-Team
+## Team
 
 Arnoldo Munoz
 Local Development
 
-From within the root directory:
+### From within the root directory:
 
-Step 1: Install dependencies
+### Step 1: Install dependencies
+```
 $ npm install
+```
 
-Step 2: Install Webpack
+### Step 2: Install Webpack
+```
 $ npm install -g webpack
+```
+### Step 3: Run server
 
-Step 3: Run server
+```
 $ npm start
+```
+### Step 4: Build project
 
-Step 4: Build project
+```
 $ npm run build
+```
