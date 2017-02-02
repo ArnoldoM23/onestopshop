@@ -5,12 +5,17 @@ Visit this link on your phone: https://shoponce.herokuapp.com
 One Stop Shop is a single page web app that connects customers with vendors to plan an event.
 
 Stack:
+
 Node.js, Express.js, React.js, Redux.js, Webpack
+
+
+
 
 ## Team
 
 Arnoldo Munoz
-Local Development
+
+###Local Development
 
 ### From within the root directory:
 
