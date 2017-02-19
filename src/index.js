@@ -9,6 +9,7 @@ import App from './components/app';
 import HomePage from './components/homePage';
 import SignIn from './components/auth/signin';
 import SignUp from './components/auth/signup';
+import VendorOrClient from './components/auth/vendorOrClient';
 import SignOut from './components/auth/signout';
 import Business1 from './components/business/business1';
 import Business2 from './components/business/business2';
@@ -39,6 +40,7 @@ ReactDOM.render(
 				<IndexRoute component={HomePage} />
 				<Route path='/signin' component={SignIn} />
 				<Route path='/signup' component={SignUp}/>
+				<Route path='/vendorOrClient' component={VendorOrClient}/>
 				<Route path='/signout' component={SignOut}/>
 				<Route path='/business1' component={Business1} />
 				<Route path='/business2' component={Business2} />

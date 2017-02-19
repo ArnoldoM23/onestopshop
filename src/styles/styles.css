@@ -131,6 +131,12 @@ header {
 	height: 100vh;
 }
 
+.vendorSignup{
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 10px;
+	font-size: 120%;
+}
 
 .hero-text-box {
 	position: absolute;

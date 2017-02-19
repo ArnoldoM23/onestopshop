@@ -28,6 +28,7 @@ class SignUp extends Component {
 			<section className='authContainer'>
 				<div className='row'>
 					<h2>Don't have an account sign up today</h2>
+					<p className='vendorSignup'>Are you a vendor sign up <Link to='/signupVendor'>here</Link></p>
 				</div>
 				<div className='logs'>
 					<form onSubmit={ handleSubmit(this.handleSubmitForm.bind(this)) }>

@@ -8,10 +8,7 @@ const Footer = () => {
 				<div className='col span-1-of-2'>
 					<ul className='footer-nav'>
 						<li><a href='#'>About us</a></li>
-						<li><a href='#'>Blog</a></li>
-						<li><a href='#'>Press</a></li>
 						<li><a href='#'>iOS App</a></li>
-						<li><a href='#'>Android App</a></li>
 					</ul>
 				</div>
 				<div className='col span-1-of-2'>
