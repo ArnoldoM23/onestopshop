@@ -5,13 +5,14 @@ import { connect } from 'react-redux';
 class Header extends Component {
 
 	renderLoginLinks(){
+		const userProfile = this.props.userType === 'Vendors' ? 'vendorProfile' : 'clientProfile';
 		if(this.props.authenticate){
 			return [
 				<li key={1}>
 					<Link to="/signout">Sign Out</Link>
 				</li>,
 				<li  key={2}>
-					<Link to="/clientProfile">Client Name</Link>
+					<Link to={`/${userProfile}`}>Client Name</Link>
 				</li>
 			];
 		}else{
@@ -53,7 +54,7 @@ class Header extends Component {
 }
 
 function mapStateToProps(state){
-	return { authenticate: state.auth.authenticated }
+	return { authenticate: state.auth.authenticated, userType: state.user.userType }
 }
 
 export default connect(mapStateToProps)(Header);

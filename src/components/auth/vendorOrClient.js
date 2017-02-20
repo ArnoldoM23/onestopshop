@@ -1,27 +1,33 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
-import { connect } from 'react-redux'; 
-import * as actions from '../../actions'
+import { connect } from 'react-redux';
+import * as actions from '../../actions';
 
 class VendorOrClient extends Component {
-
-	handleClick(type){
+	componentWillMount() {
 		if (window.location.search.indexOf('id') !== -1) {
-			const userId = window.location.search.slice(3);
-			console.log("USER ID: ", userId);
-			// localStorage.setItem('token', token);
-			// this.createVendorOrClient(type);
+			const id = window.location.search.slice(4)
+			this.props.getUserId(id);
+		}
+	}
+
+	handleClick(e) {
+		if (this.props.userId) {
+			this.props.createVendorOrClient(e.target.innerHTML+'s', Number(this.props.userId));	
 		}
 	}
 
 	render(){
 		return (
 			<section className='authContainer'>
-				<div><button onClick={ this.handleClick('Clients') }>Client</button></div>
-				<div><button onClick={ this.handleClick('Vendors') }>Vendor</button></div>
+				<div><button onClick={ this.handleClick.bind(this) }>Client</button></div>
+				<div><button onClick={ this.handleClick.bind(this) }>Vendor</button></div>
 			</section>
 		);
 	}
 };
 
-export default connect(null, actions)(VendorOrClient);
+function mapStateToProps(state) {
+	return { userId: state.user.userId }
+}
+
+export default connect(mapStateToProps, actions)(VendorOrClient);
